@@ -12,7 +12,7 @@ import { BluetoothEventListener,
   BluetoothEventSubscription,
   BluetoothEvent
 } from './BluetoothEvent';
-import { BluetoothDeviceReadEvent } from '../lib/BluetoothEvent';
+import { BluetoothDeviceReadEvent } from './BluetoothEvent';
 
 global.Buffer = global.Buffer || require('buffer').Buffer;
 

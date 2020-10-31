@@ -43,7 +43,7 @@
     "buffer": "^5.4.3"
   },
   "files": [
-    "src",
+    "lib",
     "android",
     "ios",
     "react-native-bluetooth-classic.podspec",
