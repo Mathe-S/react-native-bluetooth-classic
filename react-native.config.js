@@ -18,16 +18,18 @@ import { builtinModules } from "module";
  * 
  */
 module.exports = {
-  platforms: {
-    /* The android configuration needs to supply a the package and default
-     * instance.  The source and other keys will be created during the Gradle 
-     * build.
-     * 
-     * https://github.com/react-native-community/cli/blob/master/packages/platform-android/native_modules.gradle
-     */
-    android: {
-      packageImportPath: 'import kjd.reactnative.RNbluetoothClassicPackage',
-      packageInstance: 'RNBluetoothClassicPackage.DEFAULT_BUILDER.build()'
-    }
-  }
-}
+  dependency: {
+    platforms: {
+      /* The android configuration needs to supply a the package and default
+      * instance.  The source and other keys will be created during the Gradle 
+      * build.
+      * 
+      * https://github.com/react-native-community/cli/blob/master/packages/platform-android/native_modules.gradle
+      */
+      android: {
+        packageImportPath: 'import kjd.reactnative.RNbluetoothClassicPackage',
+        packageInstance: 'RNBluetoothClassicPackage.DEFAULT_BUILDER.build()'
+      }
+    },
+  },
+};
