@@ -70,13 +70,23 @@ public class RNBluetoothClassicPackage implements ReactPackage {
     private Map<String, DeviceConnectionFactory> mFactories;
 
     /**
-     * Creates a {@link RNBluetoothClassicPackage} - the {@link Builder} or standard packages
-     * should be used.
-     *
+     * Creates a new package with the default {@link kjd.reactnative.bluetooth.conn.DeviceConnectionFactory}
+     * for CLIENT and SERVER.
+     */
+    public RNBluetoothClassicPackage() {
+        this.mFactories = new HashMap<>();
+        this.mFactories .put(ConnectionType.CLIENT.name(), new DelimitedConnectionClientFactory());
+        this.mFactories .put(ConnectionType.SERVER.name(), new DelimitedConnectionAcceptFactory());
+    }
+
+    /**
+     * Provides the builder with a constructor.  This is the preferred method, but apprently the
+     * autolinking doesn't work exactly as defined.
+     * 
      * @param factories
      */
     private RNBluetoothClassicPackage(Map<String,DeviceConnectionFactory> factories) {
-        this.mFactories = new HashMap<>(factories);
+        this.mFactories = factories;
     }
 
     /**
