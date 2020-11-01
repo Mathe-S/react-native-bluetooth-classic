@@ -36,8 +36,7 @@
   },
   "homepage": "https://github.com/kenjdavidson/react-native-bluetooth-classic",
   "peerDependencies": {
-    "react-native": ">=0.60.0",
-    "react-native-windows": "0.41.0-rc.1"
+    "react-native": ">=0.60.0"
   },
   "dependencies": {
     "buffer": "^5.4.3"
