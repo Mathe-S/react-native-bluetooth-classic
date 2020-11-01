@@ -26,7 +26,7 @@ module.exports = {
      * https://github.com/react-native-community/cli/blob/master/packages/platform-android/native_modules.gradle
      */
     android: {
-      packageImportPath: 'kjd.reactnative',
+      packageImportPath: 'import kjd.reactnative.RNbluetoothClassicPackage',
       packageInstance: 'RNBluetoothClassicPackage.DEFAULT_BUILDER.build()'
     }
   }
