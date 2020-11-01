@@ -1,5 +1,5 @@
 
-package kjd.reactnative;
+package kjd.reactnative.bluetooth;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -14,9 +14,11 @@ import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.bridge.JavaScriptModule;
 
 import kjd.reactnative.bluetooth.conn.ConnectionType;
-import kjd.reactnative.bluetooth.device.DelimitedConnectionAcceptFactory;
-import kjd.reactnative.bluetooth.device.DelimitedConnectionClientFactory;
-import kjd.reactnative.bluetooth.device.DeviceConnectionFactory;
+import kjd.reactnative.bluetooth.conn.DelimitedConnectionAcceptFactory;
+import kjd.reactnative.bluetooth.conn.DelimitedConnectionAcceptImpl;
+import kjd.reactnative.bluetooth.conn.DelimitedConnectionClientFactory;
+import kjd.reactnative.bluetooth.conn.DelimitedConnectionClientImpl;
+import kjd.reactnative.bluetooth.conn.DeviceConnectionFactory;
 
 /**
  * {@link ReactPackage} provides a method for applications to implement customized
@@ -27,9 +29,9 @@ import kjd.reactnative.bluetooth.device.DeviceConnectionFactory;
  * <p>
  * The standard/default package has the following connections configured:
  * <ul>
- *     <li><strong>connect</strong> connection using {@link kjd.reactnative.bluetooth.device.DelimitedConnectionClientImpl}
+ *     <li><strong>connect</strong> connection using {@link DelimitedConnectionClientImpl}
  *     which connects as a client using the standard delimited messaging.</li>
- *     <li><strong>accept</strong> connection using {@link kjd.reactnative.bluetooth.device.DelimitedConnectionAcceptImpl}
+ *     <li><strong>accept</strong> connection using {@link DelimitedConnectionAcceptImpl}
  *     which accepts a connection from a device using the standard delimited messaging.</li>
  * </ul>
  * The package should be added to your {@code MainApplication} using the following:

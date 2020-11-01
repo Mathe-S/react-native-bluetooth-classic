@@ -1,4 +1,4 @@
-package kjd.reactnative.bluetooth.device;
+package kjd.reactnative.bluetooth.conn;
 
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;

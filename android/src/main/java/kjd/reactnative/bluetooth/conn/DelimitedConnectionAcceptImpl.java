@@ -1,4 +1,4 @@
-package kjd.reactnative.bluetooth.device;
+package kjd.reactnative.bluetooth.conn;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothServerSocket;
@@ -10,6 +10,7 @@ import java.util.Properties;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import kjd.reactnative.bluetooth.BluetoothUUID;
+import kjd.reactnative.bluetooth.device.NativeDevice;
 
 public class DelimitedConnectionAcceptImpl extends AbstractDelimitedConnection {
 

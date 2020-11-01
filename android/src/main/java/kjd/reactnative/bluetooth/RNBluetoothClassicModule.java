@@ -1,5 +1,5 @@
 
-package kjd.reactnative;
+package kjd.reactnative.bluetooth;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
@@ -40,23 +40,12 @@ import javax.annotation.Nullable;
 
 import kjd.reactnative.bluetooth.event.BluetoothStateEvent;
 import kjd.reactnative.bluetooth.event.EventType;
-import kjd.reactnative.bluetooth.BluetoothException;
-import kjd.reactnative.bluetooth.BluetoothMessage;
-import kjd.reactnative.bluetooth.BluetoothRequest;
-import kjd.reactnative.bluetooth.BluetoothState;
-import kjd.reactnative.bluetooth.BuildConfig;
-import kjd.reactnative.bluetooth.ConnectionFailedException;
-import kjd.reactnative.bluetooth.ConnectionLostException;
-import kjd.reactnative.bluetooth.DevicePairingException;
-import kjd.reactnative.bluetooth.Exceptions;
-import kjd.reactnative.bluetooth.InvalidBluetoothEventException;
-import kjd.reactnative.bluetooth.RNUtils;
 import kjd.reactnative.bluetooth.conn.ConnectionProperty;
 import kjd.reactnative.bluetooth.conn.ConnectionType;
-import kjd.reactnative.bluetooth.device.DeviceConnectionListener;
-import kjd.reactnative.bluetooth.device.DataReceivedListener;
-import kjd.reactnative.bluetooth.device.DeviceConnection;
-import kjd.reactnative.bluetooth.device.DeviceConnectionFactory;
+import kjd.reactnative.bluetooth.conn.DeviceConnectionListener;
+import kjd.reactnative.bluetooth.conn.DataReceivedListener;
+import kjd.reactnative.bluetooth.conn.DeviceConnection;
+import kjd.reactnative.bluetooth.conn.DeviceConnectionFactory;
 import kjd.reactnative.bluetooth.device.NativeDevice;
 import kjd.reactnative.bluetooth.receiver.ActionACLReceiver;
 import kjd.reactnative.bluetooth.receiver.DiscoveryReceiver;

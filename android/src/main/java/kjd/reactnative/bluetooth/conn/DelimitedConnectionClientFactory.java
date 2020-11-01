@@ -1,4 +1,4 @@
-package kjd.reactnative.bluetooth.device;
+package kjd.reactnative.bluetooth.conn;
 
 public class DelimitedConnectionClientFactory implements DeviceConnectionFactory {
     @Override

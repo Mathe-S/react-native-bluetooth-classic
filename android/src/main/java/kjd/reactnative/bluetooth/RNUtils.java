@@ -4,7 +4,6 @@ import android.bluetooth.BluetoothDevice;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReadableMap;
-import com.facebook.react.bridge.ReadableMapKeySetIterator;
 import com.facebook.react.bridge.WritableMap;
 
 import java.text.SimpleDateFormat;
@@ -19,33 +18,6 @@ public class RNUtils {
 
     public static String parseDate(Date date) {
         return sdf.format(date);
-    }
-
-    public static String parseCalendar(Calendar cal) {
-        return sdf.format(cal.getTime());
-    }
-
-    /**
-     * This needs to be put somewhere better, but for now it'll work.
-     *
-     * @param device BluetoothDevice
-     *
-     * @deprecated should use {@link kjd.reactnative.Mappable} instead, for any transferring of
-     *          data.
-     */
-    @Deprecated
-    public static WritableMap deviceToWritableMap(BluetoothDevice device) {
-        if (device == null)
-            return null;
-
-        WritableMap params = Arguments.createMap();
-
-        params.putString("name", device.getName());
-        params.putString("address", device.getAddress());
-        params.putString("id", device.getAddress());
-        params.putInt("class", device.getBluetoothClass() != null
-                ? device.getBluetoothClass().getDeviceClass() : -1);
-        return params;
     }
 
     public static Properties mapToProperties(ReadableMap readableMap) {
