@@ -832,10 +832,19 @@ public class RNBluetoothClassicModule
       return;
     }
 
-    String message;
-    while ((message = readUntil(this.mDelimiter)) != null) {
+    char[] hexArray = "0123456789ABCDEF".toCharArray();
+    char[] hexChars = new char[data.length * 2];
+    for (int j = 0; j < data.length; j++) {
+        int v = data[j] & 0xFF;
+        hexChars[j * 2] = hexArray[v >>> 4];
+        hexChars[j * 2 + 1] = hexArray[v & 0x0F];
+    }
+
+    String message = new String(hexChars);
+    Log.d(TAG, "Check Data:" + message);
+    if (message != null) {
       BluetoothMessage bluetoothMessage
-              = new BluetoothMessage<>(new NativeDevice(mBluetoothService.connectedDevice()).map(), message);
+        = new BluetoothMessage<>(new NativeDevice(mBluetoothService.connectedDevice()).map(), message);
       sendEvent(BluetoothEvent.READ.code, bluetoothMessage.asMap());
     }
   }
